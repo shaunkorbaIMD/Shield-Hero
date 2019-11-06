@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement_2 : MonoBehaviour
 {
     public float moveSpeed;
     public Rigidbody theRB;
@@ -12,6 +12,12 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject shield;
 
+    public float cooldownTimer;
+
+    public float cdTimer;
+    public float cdTimer_reset;
+    
+    public float coolDown;
 
 
     void slowTime()
@@ -23,13 +29,12 @@ public class PlayerMovement : MonoBehaviour
         Time.fixedDeltaTime = Time.timeScale * 0.02f;
     }
 
-
     // Start is called before the first frame update
     void Start()
     {
         theRB = GetComponent<Rigidbody>();
-
-
+        //shield.SetActive(false);
+       
     }
 
     // Update is called once per frame
@@ -39,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
 
 
+
         if (Input.GetMouseButton(0))
         {
             slowTime();
@@ -46,20 +52,47 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        theRB.velocity = new Vector3(Input.GetAxis("Horizontal")*moveSpeed, theRB.velocity.y, Input.GetAxis("Vertical")* moveSpeed);
+        theRB.velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, theRB.velocity.y, Input.GetAxis("Vertical") * moveSpeed);
 
-        if(theRB.velocity.magnitude == 0)
+        //cooldownTimer
+        if(cooldownTimer < 0)
         {
-            //spawn shield
-            shield.SetActive(true);
-            Debug.Log("Not moving");
+            cooldownTimer = 0;
         }
-        else
+        if(cooldownTimer > 0)
         {
-            //spawn shield
-            shield.SetActive(false);
-            Debug.Log("Moving");
+            cooldownTimer -= Time.deltaTime;
         }
+
+        //cdtimer
+        if (cdTimer < 0)
+        {
+            cdTimer = 0;
+        }
+        if (cdTimer > 0 && cooldownTimer == 0)
+        {
+            cdTimer -= Time.deltaTime;
+        }
+
+       
+            if (cooldownTimer == 0) 
+            {
+                if (Input.GetMouseButtonDown(1) && cdTimer == 0) //right click
+                    {
+                        shield.SetActive(true);
+                        Debug.Log("Shield ACTIVE");
+                        cooldownTimer = coolDown;
+                        cdTimer = cdTimer_reset;
+                    }
+                    else
+                    {
+                        shield.SetActive(false);
+                        
+                    }
+            }
+        
+        
+        
 
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         float midPoint = (transform.position - Camera.main.transform.position).magnitude; //dist between this and camera
