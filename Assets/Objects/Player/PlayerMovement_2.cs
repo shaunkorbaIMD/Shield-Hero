@@ -5,10 +5,13 @@ using UnityEngine;
 public class PlayerMovement_2 : MonoBehaviour
 {
     public float moveSpeed;
+    public float normMoveSpeed;
+    public float shieldMoveSpeed;
+
     public Rigidbody theRB;
 
-    public float slowDownFactor = 0.2f;
-    public float slowDownLength = 1f;
+    public float slowDownFactor = 0.85f;
+    public float slowDownLength = 3f;
 
     public GameObject shield;
 
@@ -34,7 +37,10 @@ public class PlayerMovement_2 : MonoBehaviour
     {
         theRB = GetComponent<Rigidbody>();
         //shield.SetActive(false);
-       
+
+        normMoveSpeed = moveSpeed;
+        shieldMoveSpeed = normMoveSpeed - 2;
+
     }
 
     // Update is called once per frame
@@ -45,11 +51,7 @@ public class PlayerMovement_2 : MonoBehaviour
 
 
 
-        if (Input.GetMouseButton(0))
-        {
-            slowTime();
-            Debug.Log("Yep");
-        }
+        
 
 
         theRB.velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, theRB.velocity.y, Input.GetAxis("Vertical") * moveSpeed);
@@ -73,23 +75,28 @@ public class PlayerMovement_2 : MonoBehaviour
         {
             cdTimer -= Time.deltaTime;
         }
+        if (Input.GetMouseButton(1)) //right click
+        {
+            slowTime();
+        }
+        if ( Input.GetMouseButton(0) ) //left click
+        {
+           
 
-       
-            if (cooldownTimer == 0) 
-            {
-                if (Input.GetMouseButtonDown(1) && cdTimer == 0) //right click
-                    {
-                        shield.SetActive(true);
-                        Debug.Log("Shield ACTIVE");
-                        cooldownTimer = coolDown;
-                        cdTimer = cdTimer_reset;
-                    }
-                    else
-                    {
-                        shield.SetActive(false);
-                        
-                    }
-            }
+            //if (cdTimer == 0 && cooldownTimer > 0)
+            //{
+                shield.SetActive(true);
+                cooldownTimer -= Time.unscaledDeltaTime;
+           // }
+
+        } else if (shield.active == true)
+        { 
+            shield.SetActive(false);
+            //cdTimer = cdTimer_reset;
+            //cooldownTimer = coolDown;
+
+        }
+        
         
         
         

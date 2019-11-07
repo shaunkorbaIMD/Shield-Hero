@@ -608,7 +608,9 @@
   <ItemGroup>
     <Compile Include="Assets\CameraFollow.cs" />
     <Compile Include="Assets\Objects\Enemy\enemyAI.cs" />
+    <Compile Include="Assets\Objects\Enemy\projectileCode.cs" />
     <Compile Include="Assets\Objects\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Objects\Player\PlayerMovement_2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryCommon.uss" />

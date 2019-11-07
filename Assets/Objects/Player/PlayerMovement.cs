@@ -42,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             slowTime();
-            Debug.Log("Yep");
         }
 
 
@@ -52,13 +51,12 @@ public class PlayerMovement : MonoBehaviour
         {
             //spawn shield
             shield.SetActive(true);
-            Debug.Log("Not moving");
         }
         else
         {
             //spawn shield
             shield.SetActive(false);
-            Debug.Log("Moving");
+            
         }
 
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
