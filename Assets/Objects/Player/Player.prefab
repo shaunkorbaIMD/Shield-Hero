@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 692616810305302418}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,6 +127,7 @@ MonoBehaviour:
   theRB: {fileID: 0}
   slowDownFactor: 0.05
   slowDownLength: 2
+  shield: {fileID: 0}
 --- !u!114 &692616810305302418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,3 +144,4 @@ MonoBehaviour:
   theRB: {fileID: 0}
   slowDownFactor: 0.05
   slowDownLength: 2
+  shield: {fileID: 0}

@@ -14,7 +14,7 @@ public class enemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -24,14 +24,22 @@ public class enemyAI : MonoBehaviour
         {
             GameObject p = Instantiate(projectile, transform.position, transform.rotation);
 
-            p.GetComponent<Rigidbody>().velocity = new Vector3(3, 0, 3);
+            var projSpeed = 9;
+
+            var vel = player.GetComponent<Rigidbody>().velocity;
+
+            var dis = Vector3.Magnitude(player.transform.position - transform.position);
 
 
-            shootTimer = shootTimerLength + Random.Range(0, 4);
+
+            p.GetComponent<Rigidbody>().velocity = Vector3.Normalize((player.transform.position + vel*(dis/20)) - transform.position)*projSpeed;
+
+
+            shootTimer = shootTimerLength;
         }
         else
         {
-            shootTimer -= 20f*Time.deltaTime;
+            shootTimer -= 0.1f*Time.deltaTime;
         }
                 
                

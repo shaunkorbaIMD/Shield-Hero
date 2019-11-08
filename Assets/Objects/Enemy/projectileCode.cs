@@ -18,7 +18,7 @@ public class projectileCode : MonoBehaviour
         {
             if (!(projectile.GetComponent<Collider>() == GetComponent<Collider>()))
                 Physics.IgnoreCollision(projectile.GetComponent<Collider>(), GetComponent<Collider>());
-        }            
+        }
     }
 
     // Update is called once per frame

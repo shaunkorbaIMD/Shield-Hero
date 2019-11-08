@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
+
     public Rigidbody theRB;
 
     public float slowDownFactor = 0.2f;

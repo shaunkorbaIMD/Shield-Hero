@@ -10,7 +10,7 @@ public class PlayerMovement_2 : MonoBehaviour
 
     public Rigidbody theRB;
 
-    public float slowDownFactor = 0.85f;
+    public float slowDownFactor = 0.9f;
     public float slowDownLength = 3f;
 
     public GameObject shield;
@@ -87,11 +87,12 @@ public class PlayerMovement_2 : MonoBehaviour
             //{
                 shield.SetActive(true);
                 cooldownTimer -= Time.unscaledDeltaTime;
-           // }
+            // }
+            moveSpeed = shieldMoveSpeed;
 
-        } else if (shield.active == true)
-        { 
+        } else if (shield.active == true){ 
             shield.SetActive(false);
+            moveSpeed = normMoveSpeed;
             //cdTimer = cdTimer_reset;
             //cooldownTimer = coolDown;
 
