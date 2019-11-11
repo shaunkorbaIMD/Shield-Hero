@@ -9,6 +9,9 @@ public class projectileCode : MonoBehaviour
 
     private Vector3 lockedVelocity;
     private bool velIsLocked = false;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,8 @@ public class projectileCode : MonoBehaviour
             if (!(projectile.GetComponent<Collider>() == GetComponent<Collider>()))
                 Physics.IgnoreCollision(projectile.GetComponent<Collider>(), GetComponent<Collider>());
         }
+        
+
     }
 
     // Update is called once per frame
@@ -33,7 +38,7 @@ public class projectileCode : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.tag == "Shield")
+        if (col.gameObject.tag == "Shield")
         {
 
             Vector3 vel = Vector3.Normalize(thisRB.velocity);
@@ -50,6 +55,12 @@ public class projectileCode : MonoBehaviour
             Debug.Log("Hit Shield");
 
         }
+        if (col.gameObject.tag == "Enemy")
+        {
+            
+            Debug.Log("Enemy Hit");
+        }
         
     }
 }
+

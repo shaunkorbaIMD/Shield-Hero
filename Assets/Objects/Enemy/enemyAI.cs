@@ -10,6 +10,11 @@ public class enemyAI : MonoBehaviour
     private float shootTimer = 0;
     public float shootTimerLength = 0.05f;
 
+    public float amountShot;
+
+    public float shootCooldown;
+    public float shootCooldownTimer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,29 +25,76 @@ public class enemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(shootTimer < 0)
+
+       
+        //burst shooting
+        if (amountShot >= 3)
         {
-            GameObject p = Instantiate(projectile, transform.position, transform.rotation);
+            //cooldownTimer
+            if (shootCooldownTimer < 0)
+            {
+                shootCooldownTimer = 0;
+            }
+            if (shootCooldownTimer > 0)
+            {
+                shootCooldownTimer -= Time.deltaTime;
+            }
+            if(shootCooldownTimer == 0)
+            {
 
-            var projSpeed = 9;
+                amountShot = 0;
+                if (shootCooldown < 0)
+                {
+                    shootCooldown = 0;
+                }
+                if (shootCooldown > 0)
+                {
+                    shootCooldown -= Time.deltaTime;
+                }
+                if(shootCooldown == 0)
+                {
+                    shootCooldownTimer = 3.0f;
+                }
 
-            var vel = player.GetComponent<Rigidbody>().velocity;
-
-            var dis = Vector3.Magnitude(player.transform.position - transform.position);
+            }
 
 
-
-            p.GetComponent<Rigidbody>().velocity = Vector3.Normalize((player.transform.position + vel*(dis/20)) - transform.position)*projSpeed;
-
-
-            shootTimer = shootTimerLength;
+            //Debug.Log("timer: " + shootCooldownTimer);
         }
-        else
+
+
+
+
+        if (amountShot < 3)
         {
-            shootTimer -= 0.1f*Time.deltaTime;
-        }
-                
-               
+            if (shootTimer < 0)
+            {
+                GameObject p = Instantiate(projectile, transform.position, transform.rotation);
 
-    }
+                var projSpeed = 9;
+
+                var vel = player.GetComponent<Rigidbody>().velocity;
+
+                var dis = Vector3.Magnitude(player.transform.position - transform.position);
+
+
+
+                p.GetComponent<Rigidbody>().velocity = Vector3.Normalize((player.transform.position + vel * (dis / 20)) - transform.position) * projSpeed;
+
+
+                shootTimer = shootTimerLength;
+                amountShot += 1;
+
+            }
+            else
+            {
+                shootTimer -= 0.1f * Time.deltaTime;
+            }
+        }
+
+        
+        
+
+
+    }//end of update
 }
