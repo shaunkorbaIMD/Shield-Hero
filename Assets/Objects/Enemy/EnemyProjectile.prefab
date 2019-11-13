@@ -4928,7 +4928,7 @@ Transform:
   m_GameObject: {fileID: 7352356463840717734}
   m_LocalRotation: {x: -0, y: -0.7027249, z: -0, w: 0.7114617}
   m_LocalPosition: {x: -7.29, y: 1.0819513, z: 0.35}
-  m_LocalScale: {x: 0.24505246, y: 0.24505244, z: 0.24505246}
+  m_LocalScale: {x: 0.3097708, y: 0.3097708, z: 0.4223415}
   m_Children:
   - {fileID: 5625514125614926302}
   - {fileID: 7381552672055988061}
@@ -4995,6 +4995,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisRB: {fileID: -2971653550433789623}
+  trail: {fileID: 1666622562731263761}
+  particleSys: {fileID: 3884792654226534097}
+  reflectedMat: {fileID: 2100000, guid: 0f29b83d522d72b4fb802d8dd8561ec1, type: 2}
 --- !u!135 &7702326943487021799
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -10,12 +10,13 @@ public class CameraFollow : MonoBehaviour
     public float smoothSpeed = 999999999f;
 
     public Vector3 offset;
-
+    public Vector3 startOffset;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        startOffset = offset;
         //transform.position = target.position + offset * 0.6f + new Vector3(0,6,-3);
     }
 

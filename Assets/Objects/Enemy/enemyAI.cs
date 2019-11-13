@@ -10,7 +10,7 @@ public class enemyAI : MonoBehaviour
     private float shootTimer = 0;
     public float shootTimerLength = 0.05f;
 
-    public float amountShot;
+    public float amountShot = 0;
 
     public float shootCooldown;
     public float shootCooldownTimer;
@@ -20,58 +20,37 @@ public class enemyAI : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        amountShot = 5;
+
+        shootCooldownTimer = 1f+Random.Range(0f, 4f);
     }
 
     // Update is called once per frame
     void Update()
     {
 
-       
+
         //burst shooting
         if (amountShot >= 3)
         {
-            //cooldownTimer
-            if (shootCooldownTimer < 0)
-            {
-                shootCooldownTimer = 0;
-            }
             if (shootCooldownTimer > 0)
             {
                 shootCooldownTimer -= Time.deltaTime;
-            }
-            if(shootCooldownTimer == 0)
-            {
-
+            } else {
                 amountShot = 0;
-                if (shootCooldown < 0)
-                {
-                    shootCooldown = 0;
-                }
-                if (shootCooldown > 0)
-                {
-                    shootCooldown -= Time.deltaTime;
-                }
-                if(shootCooldown == 0)
-                {
-                    shootCooldownTimer = 3.0f;
-                }
-
             }
 
 
             //Debug.Log("timer: " + shootCooldownTimer);
-        }
 
+        } else if (amountShot < 3 && Vector3.Magnitude(player.transform.position - transform.position) < 18f) {
 
-
-
-        if (amountShot < 3)
-        {
             if (shootTimer < 0)
             {
                 GameObject p = Instantiate(projectile, transform.position, transform.rotation);
 
-                var projSpeed = 9;
+                var projSpeed = 6;
 
                 var vel = player.GetComponent<Rigidbody>().velocity;
 
@@ -84,6 +63,11 @@ public class enemyAI : MonoBehaviour
 
                 shootTimer = shootTimerLength;
                 amountShot += 1;
+
+                if(amountShot>=3)
+                {
+                    shootCooldownTimer = shootCooldown + Random.Range(0f, 5f);
+                }
 
             }
             else

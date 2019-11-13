@@ -5,15 +5,29 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
+    public float normMoveSpeed;
+    public float shieldMoveSpeed;
+
+    public GameObject cam;
 
     public Rigidbody theRB;
 
-    public float slowDownFactor = 0.2f;
-    public float slowDownLength = 1f;
+    public float slowDownFactor = 0.9f;
+    public float slowDownLength = 3f;
 
     public GameObject shield;
 
+    public float cooldownTimer;
 
+    public float cdTimer;
+    public float cdTimer_reset;
+    
+    public float coolDown;
+
+
+    public bool aimMethod = false;
+
+    public bool autoAimOn = true;
 
     void slowTime()
     {
@@ -24,12 +38,14 @@ public class PlayerMovement : MonoBehaviour
         Time.fixedDeltaTime = Time.timeScale * 0.02f;
     }
 
-
     // Start is called before the first frame update
     void Start()
     {
         theRB = GetComponent<Rigidbody>();
+        //shield.SetActive(false);
 
+        normMoveSpeed = moveSpeed;
+        shieldMoveSpeed = normMoveSpeed - 2;
 
     }
 
@@ -40,25 +56,114 @@ public class PlayerMovement : MonoBehaviour
         Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
 
 
-        if (Input.GetMouseButton(0))
+
+
+
+
+        theRB.velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, theRB.velocity.y, Input.GetAxis("Vertical") * moveSpeed);
+
+        //cooldownTimer
+        if (cooldownTimer < 0)
+        {
+            cooldownTimer = 0;
+        }
+        if (cooldownTimer > 0)
+        {
+            cooldownTimer -= Time.deltaTime;
+        }
+
+        //cdtimer
+        if (cdTimer < 0)
+        {
+            cdTimer = 0;
+        }
+        if (cdTimer > 0 && cooldownTimer == 0)
+        {
+            cdTimer -= Time.deltaTime;
+        }
+
+        var offset = cam.GetComponent<CameraFollow>().offset;
+        var startOffset = cam.GetComponent<CameraFollow>().startOffset;
+
+
+        // SLOWING TIME ////////////////////////////////////////////////////////
+
+        if (Input.GetMouseButton(1)) //right click
         {
             slowTime();
+
+
+
+            cam.GetComponent<CameraFollow>().offset = Vector3.Lerp(offset, startOffset + new Vector3(0, -1, 1), 0.01f);
+        } else
+        {
+            cam.GetComponent<CameraFollow>().offset = Vector3.Lerp(offset, startOffset, 0.04f);
         }
 
+        // TAKING OUT SHIELD ////////////////////////////////////////////////////////
 
-        theRB.velocity = new Vector3(Input.GetAxis("Horizontal")*moveSpeed, theRB.velocity.y, Input.GetAxis("Vertical")* moveSpeed);
+        //switching method
 
-        if(theRB.velocity.magnitude == 0)
+        if(Input.GetButtonDown("AimMode"))
         {
-            //spawn shield
-            shield.SetActive(true);
+            moveSpeed = normMoveSpeed;
+            if (aimMethod)
+            {
+                aimMethod = false;
+            } else {
+                aimMethod = true;
+            }
+
         }
-        else
+
+        if(Input.GetButtonDown("AutoAim"))
         {
-            //spawn shield
-            shield.SetActive(false);
+            if(autoAimOn)
+            {
+                autoAimOn = false;
+            } else
+            {
+                autoAimOn = true;
+            }
+        }
             
-        }
+        //methods:
+            if (aimMethod)
+            {
+                moveSpeed = normMoveSpeed;
+
+                if (theRB.velocity.magnitude == 0)
+                {
+                    //spawn shield
+                    shield.SetActive(true);
+                }
+                else
+                {
+                    //spawn shield
+                    shield.SetActive(false);
+
+                }
+
+            } else { 
+
+                if (Input.GetMouseButton(0)) //left click
+                {
+
+                    shield.SetActive(true);
+                    cooldownTimer -= Time.unscaledDeltaTime;
+                    
+                    moveSpeed = shieldMoveSpeed;
+
+                } else if (shield.active == true) {
+
+                    shield.SetActive(false);
+                    moveSpeed = normMoveSpeed;
+           
+                }
+            }
+        
+        
+        
 
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         float midPoint = (transform.position - Camera.main.transform.position).magnitude; //dist between this and camera

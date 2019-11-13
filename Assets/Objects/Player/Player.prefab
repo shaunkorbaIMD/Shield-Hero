@@ -87,8 +87,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4695046246871692676}
-  - component: {fileID: 1500459560268969961}
-  - component: {fileID: 692616810305302418}
+  - component: {fileID: 6207235717413829723}
+  - component: {fileID: -1544594687891150980}
+  - component: {fileID: 4423146575995840297}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -111,7 +112,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1500459560268969961
+--- !u!54 &6207235717413829723
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8607362363664336791}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
+--- !u!114 &-1544594687891150980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,28 +137,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 8607362363664336791}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 614d441c3d11b5e4c9c262592ec65279, type: 3}
+  m_Script: {fileID: 11500000, guid: d0b04ce7a404c334ba04f83aec429141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  theRB: {fileID: 0}
-  slowDownFactor: 0.05
-  slowDownLength: 2
+  moveSpeed: 6
+  normMoveSpeed: 0
+  shieldMoveSpeed: 0
+  cam: {fileID: 0}
+  theRB: {fileID: 6207235717413829723}
+  slowDownFactor: 0.2
+  slowDownLength: 1
   shield: {fileID: 0}
---- !u!114 &692616810305302418
-MonoBehaviour:
+  cooldownTimer: 0
+  cdTimer: 0
+  cdTimer_reset: 0
+  coolDown: 0
+  aimMethod: 1
+--- !u!65 &4423146575995840297
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8607362363664336791}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 614d441c3d11b5e4c9c262592ec65279, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0
-  theRB: {fileID: 0}
-  slowDownFactor: 0.05
-  slowDownLength: 2
-  shield: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 1}
+  m_Center: {x: 0, y: 1.5, z: -0.2}
