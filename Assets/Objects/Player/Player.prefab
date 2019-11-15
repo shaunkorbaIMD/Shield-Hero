@@ -141,8 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 6
-  normMoveSpeed: 0
-  shieldMoveSpeed: 0
+  shieldMoveSpeed: 2
   cam: {fileID: 0}
   theRB: {fileID: 6207235717413829723}
   slowDownFactor: 0.2
@@ -153,6 +152,7 @@ MonoBehaviour:
   cdTimer_reset: 0
   coolDown: 0
   aimMethod: 1
+  autoAimOn: 1
 --- !u!65 &4423146575995840297
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -164,5 +164,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 1}
-  m_Center: {x: 0, y: 1.5, z: -0.2}
+  m_Size: {x: 0.6, y: 2, z: 0.5}
+  m_Center: {x: 0.05, y: 1.5, z: -0.1}

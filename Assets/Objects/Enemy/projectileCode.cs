@@ -10,7 +10,6 @@ public class projectileCode : MonoBehaviour
     public TrailRenderer trail;
     public ParticleSystemRenderer particleSys;
 
-    private bool autoAimOn = true;
 
     private Vector3 lockedVelocity;
     private bool velIsLocked = false;
@@ -54,8 +53,6 @@ public class projectileCode : MonoBehaviour
 
         Transform[] enemTrans = new Transform[3];
 
-
-        autoAimOn = p.autoAimOn;
         
     }
 
@@ -81,64 +78,94 @@ public class projectileCode : MonoBehaviour
 
             // Raycast checking
 
-            if (autoAimOn)
+            Ray r = new Ray(transform.position, vel);
+            Debug.DrawRay(r.origin, r.direction * 20, Color.white, 1);
+            RaycastHit hit;
+
+            bool shouldHit = false;
+
+            if (Physics.Raycast(r, out hit, Mathf.Infinity, 1 << 8))
             {
-                Ray r = new Ray(transform.position, vel);
-                Debug.DrawRay(r.origin, r.direction * 20, Color.white, 1);
-                RaycastHit hit;
 
-                bool shouldHit = false;
+                Debug.Log("Will");
+                shouldHit = true;
 
+                vec = Vector3.Normalize(hit.transform.position - transform.position);
+
+
+            }
+            else
+            {
+
+                r.direction = Quaternion.AngleAxis(4, Vector3.up) * r.direction;
+
+                Debug.DrawRay(r.origin, r.direction * 20, Color.red, 1);
                 if (Physics.Raycast(r, out hit, Mathf.Infinity, 1 << 8))
                 {
 
-                    Debug.Log("Will");
+                    Debug.Log("redWill");
                     shouldHit = true;
 
                     vec = Vector3.Normalize(hit.transform.position - transform.position);
 
-
                 }
                 else
-                {
+                { //if this ray didn't pickup an enemy..
 
-                    r.direction = Quaternion.AngleAxis(8, Vector3.up) * r.direction;
+                    r.direction = Quaternion.AngleAxis(-8, Vector3.up) * r.direction;
 
-                    Debug.DrawRay(r.origin, r.direction * 20, Color.red, 1);
+                    Debug.DrawRay(r.origin, r.direction * 20, Color.green, 1);
+
                     if (Physics.Raycast(r, out hit, Mathf.Infinity, 1 << 8))
                     {
 
-                        Debug.Log("redWill");
+                        Debug.Log("greenWill");
                         shouldHit = true;
 
                         vec = Vector3.Normalize(hit.transform.position - transform.position);
+                    } else
+                    {
+                        r.direction = Quaternion.AngleAxis(-4, Vector3.up) * r.direction;
 
-                    }
-                    else
-                    { //if this ray didn't pickup an enemy..
-
-                        r.direction = Quaternion.AngleAxis(-16, Vector3.up) * r.direction;
-
-                        Debug.DrawRay(r.origin, r.direction * 20, Color.green, 1);
-
+                        Debug.DrawRay(r.origin, r.direction * 20, Color.yellow, 1);
                         if (Physics.Raycast(r, out hit, Mathf.Infinity, 1 << 8))
                         {
 
-                            Debug.Log("greenWill");
+                            Debug.Log("yellowWill");
                             shouldHit = true;
 
                             vec = Vector3.Normalize(hit.transform.position - transform.position);
+
+                        } else
+                        {
+                            r.direction = Quaternion.AngleAxis(16, Vector3.up) * r.direction;
+
+                            Debug.DrawRay(r.origin, r.direction * 20, Color.blue, 1);
+                            if (Physics.Raycast(r, out hit, Mathf.Infinity, 1 << 8))
+                            {
+
+                                Debug.Log("blueWill");
+                                shouldHit = true;
+
+                                vec = Vector3.Normalize(hit.transform.position - transform.position);
+
+                            }
                         }
                     }
-                }
 
 
-                if (shouldHit == true)
-                {
-                    vel = vec;
-                }
+                } 
 
             }
+            
+
+
+            if (shouldHit == true)
+            {
+                vel = vec;
+            }
+
+            
             thisRB.velocity = vel * 6f;
 
             // Lock Velocity
@@ -148,12 +175,24 @@ public class projectileCode : MonoBehaviour
 
 
             var enemies = GameObject.FindGameObjectsWithTag("Enemy");
-            //enable enemy collisions
+            //Does collide with enemies
             foreach (var enemy in enemies)
             {
                 if (!(enemy.GetComponent<Collider>() == GetComponent<Collider>()))
                     Physics.IgnoreCollision(enemy.GetComponent<Collider>(), GetComponent<Collider>(), false);
             }
+
+
+            var shield = GameObject.FindGameObjectWithTag("Shield");
+
+            if (!(shield.GetComponent<Collider>() == GetComponent<Collider>()))
+                Physics.IgnoreCollision(shield.GetComponent<Collider>(), GetComponent<Collider>());
+
+
+            
+            if (!(p.GetComponent<Collider>() == GetComponent<Collider>()))
+                Physics.IgnoreCollision(p.GetComponent<Collider>(), GetComponent<Collider>());
+
 
             gameObject.GetComponent<Renderer>().material = reflectedMat;
             

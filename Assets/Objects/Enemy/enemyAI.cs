@@ -32,7 +32,7 @@ public class enemyAI : MonoBehaviour
 
 
         //burst shooting
-        if (amountShot >= 3)
+        if (amountShot >= 2)
         {
             if (shootCooldownTimer > 0)
             {
@@ -41,10 +41,7 @@ public class enemyAI : MonoBehaviour
                 amountShot = 0;
             }
 
-
-            //Debug.Log("timer: " + shootCooldownTimer);
-
-        } else if (amountShot < 3 && Vector3.Magnitude(player.transform.position - transform.position) < 18f) {
+        } else if (amountShot < 2 && Vector3.Magnitude(player.transform.position - transform.position) < 18f) {
 
             if (shootTimer < 0)
             {
@@ -64,7 +61,7 @@ public class enemyAI : MonoBehaviour
                 shootTimer = shootTimerLength;
                 amountShot += 1;
 
-                if(amountShot>=3)
+                if(amountShot>=2)
                 {
                     shootCooldownTimer = shootCooldown + Random.Range(0f, 5f);
                 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
-    public float normMoveSpeed;
+    private float normMoveSpeed;
     public float shieldMoveSpeed;
 
     public GameObject cam;
@@ -23,11 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public float cdTimer_reset;
     
     public float coolDown;
-
-
-    public bool aimMethod = false;
-
-    public bool autoAimOn = true;
+    
 
     void slowTime()
     {
@@ -45,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
         //shield.SetActive(false);
 
         normMoveSpeed = moveSpeed;
-        shieldMoveSpeed = normMoveSpeed - 2;
 
     }
 
@@ -102,67 +97,29 @@ public class PlayerMovement : MonoBehaviour
 
         // TAKING OUT SHIELD ////////////////////////////////////////////////////////
 
-        //switching method
+        
+        
 
-        if(Input.GetButtonDown("AimMode"))
+        if (Input.GetMouseButton(0)) //left click
         {
-            moveSpeed = normMoveSpeed;
-            if (aimMethod)
-            {
-                aimMethod = false;
-            } else {
-                aimMethod = true;
-            }
 
-        }
-
-        if(Input.GetButtonDown("AutoAim"))
-        {
-            if(autoAimOn)
-            {
-                autoAimOn = false;
-            } else
-            {
-                autoAimOn = true;
-            }
-        }
-            
-        //methods:
-            if (aimMethod)
-            {
-                moveSpeed = normMoveSpeed;
-
-                if (theRB.velocity.magnitude == 0)
-                {
-                    //spawn shield
-                    shield.SetActive(true);
-                }
-                else
-                {
-                    //spawn shield
-                    shield.SetActive(false);
-
-                }
-
-            } else { 
-
-                if (Input.GetMouseButton(0)) //left click
-                {
-
-                    shield.SetActive(true);
-                    cooldownTimer -= Time.unscaledDeltaTime;
+            shield.SetActive(true);
+            cooldownTimer -= Time.unscaledDeltaTime;
                     
-                    moveSpeed = shieldMoveSpeed;
+            moveSpeed = Mathf.Lerp(moveSpeed, shieldMoveSpeed, 0.07f);
 
-                } else if (shield.active == true) {
-
-                    shield.SetActive(false);
-                    moveSpeed = normMoveSpeed;
-           
-                }
+        } else  {
+            if (shield.active == true)
+            { 
+                shield.SetActive(false);
             }
+            moveSpeed = Mathf.Lerp(moveSpeed, normMoveSpeed, 0.07f);
+        }
+
+
         
         
+            
         
 
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
