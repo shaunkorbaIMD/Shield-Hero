@@ -19,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     public float slowDownFactor = 0.9f;
     public float slowDownLength = 3f;
 
+    //static public float maxHealth;
+    //static public float health;
+
     public float maxHealth;
     public float health;
 

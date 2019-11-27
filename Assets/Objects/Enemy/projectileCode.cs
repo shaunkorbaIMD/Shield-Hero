@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class projectileCode : MonoBehaviour
 {
-    
-    
+
+    public PlayerMovement playerMovement;
 
     public Rigidbody thisRB;
 
@@ -212,6 +212,7 @@ public class projectileCode : MonoBehaviour
 
         if (col.gameObject.tag == "Player")
         {
+            //PlayerMovement.health--;
             col.gameObject.GetComponent<PlayerMovement>().instance.health--;
             Destroy(gameObject);
         }
