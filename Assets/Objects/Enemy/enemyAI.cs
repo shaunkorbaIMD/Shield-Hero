@@ -10,6 +10,8 @@ public class enemyAI : MonoBehaviour
     private float shootTimer = 0;
     public float shootTimerLength = 0.05f;
 
+    public float projSpeed = 6;
+
     public float amountShot = 0;
 
     public float shootCooldown;
@@ -47,7 +49,7 @@ public class enemyAI : MonoBehaviour
             {
                 GameObject p = Instantiate(projectile, transform.position, transform.rotation);
 
-                var projSpeed = 6;
+                
 
                 var vel = player.GetComponent<Rigidbody>().velocity;
 

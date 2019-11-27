@@ -5,6 +5,8 @@ using UnityEngine;
 public class projectileCode : MonoBehaviour
 {
     
+    
+
     public Rigidbody thisRB;
 
     public TrailRenderer trail;
@@ -38,6 +40,7 @@ public class projectileCode : MonoBehaviour
             if (!(enemy.GetComponent<Collider>() == GetComponent<Collider>()))
                 Physics.IgnoreCollision(enemy.GetComponent<Collider>(), GetComponent<Collider>());
         }
+        
         
 
     }
@@ -166,7 +169,7 @@ public class projectileCode : MonoBehaviour
             }
 
             
-            thisRB.velocity = vel * 6f;
+            thisRB.velocity = vel * thisRB.velocity.magnitude * 1.2f;
 
             // Lock Velocity
 
@@ -209,16 +212,21 @@ public class projectileCode : MonoBehaviour
 
         if (col.gameObject.tag == "Player")
         {
+            col.gameObject.GetComponent<PlayerMovement>().instance.health--;
             Destroy(gameObject);
         }
 
-            if (col.gameObject.tag == "Enemy")
+        if (col.gameObject.tag == "Enemy")
         {
             Destroy(col.gameObject);
             Destroy(gameObject);
             
         }
         
+        if(col.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
     }
 }
 

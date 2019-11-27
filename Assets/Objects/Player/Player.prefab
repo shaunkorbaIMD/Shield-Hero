@@ -140,19 +140,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b04ce7a404c334ba04f83aec429141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   moveSpeed: 6
   shieldMoveSpeed: 2
   cam: {fileID: 0}
   theRB: {fileID: 6207235717413829723}
   slowDownFactor: 0.2
   slowDownLength: 1
+  maxHealth: 5
+  health: 0
   shield: {fileID: 0}
   cooldownTimer: 0
   cdTimer: 0
   cdTimer_reset: 0
   coolDown: 0
-  aimMethod: 1
-  autoAimOn: 1
 --- !u!65 &4423146575995840297
 BoxCollider:
   m_ObjectHideFlags: 0

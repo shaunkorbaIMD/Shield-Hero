@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_GoldPile
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.67997
@@ -213,6 +217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Wall_LightStick (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.902
@@ -269,6 +277,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_Name
       value: Props_GoldPile (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -332,6 +344,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -458,6 +474,123 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4311585, y: 0.43115833, z: 0.43115827}
   m_Center: {x: 0, y: 0.2155792, z: 0}
+--- !u!1 &37173163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37173164}
+  - component: {fileID: 37173167}
+  - component: {fileID: 37173166}
+  - component: {fileID: 37173165}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &37173164
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37173163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -26.7}
+  m_LocalScale: {x: 1.318151, y: 3.2253, z: 1}
+  m_Children: []
+  m_Father: {fileID: 327101605}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -409.9, y: 320.9}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &37173165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37173163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 37173166}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &37173166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37173163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &37173167
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37173163}
+  m_CullTransparentMesh: 0
 --- !u!4 &37393955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 401e70dad0e27154891bdf3770690a32,
@@ -530,6 +663,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -604,7 +741,7 @@ GameObject:
   - component: {fileID: 71705218}
   m_Layer: 0
   m_Name: torches
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -654,6 +791,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_Name
       value: Props_Wall_LightStick (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
@@ -711,6 +852,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 401e70dad0e27154891bdf3770690a32, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Doorway (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 401e70dad0e27154891bdf3770690a32, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 401e70dad0e27154891bdf3770690a32, type: 3}
       propertyPath: m_LocalPosition.x
@@ -848,6 +993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_PotionBig_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 1282401954096636, guid: bd7700e587e2d90439401d93324a23e4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4908073047772912, guid: bd7700e587e2d90439401d93324a23e4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.487817
@@ -947,6 +1096,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1178,6 +1331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Vase_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c292328f2498a254eaf0d4b6b668f9f5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c292328f2498a254eaf0d4b6b668f9f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.627678
@@ -1342,6 +1499,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 14184199719f5be45bf3d8b6fd16d568, type: 3}
       propertyPath: m_Name
       value: Props_Barrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 14184199719f5be45bf3d8b6fd16d568, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 14184199719f5be45bf3d8b6fd16d568, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1527,6 +1688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Gold (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 882cde0458f610b438077a5ac1614cf9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 882cde0458f610b438077a5ac1614cf9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.693514
@@ -1584,6 +1749,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone_Corner (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.467
@@ -1640,6 +1809,10 @@ PrefabInstance:
     - target: {fileID: 1540518425858772, guid: 45145d7e161280c4a9c3b644a71752ac, type: 3}
       propertyPath: m_Name
       value: Candle_Light (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540518425858772, guid: 45145d7e161280c4a9c3b644a71752ac, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4839470015990678, guid: 45145d7e161280c4a9c3b644a71752ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1722,6 +1895,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 138c92757aad371499fbc159b167dbd5, type: 3}
       propertyPath: m_Name
       value: Props_WoodenPlank_Big
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 138c92757aad371499fbc159b167dbd5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 138c92757aad371499fbc159b167dbd5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1933,6 +2110,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.24
@@ -2000,6 +2181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.24
@@ -2056,6 +2241,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2114,6 +2303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Wall_LightStick (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.886
@@ -2170,6 +2363,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: eeddff60faec64f4283416d1c7e2c966, type: 3}
       propertyPath: m_Name
       value: Props_Skeleton_Rib
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eeddff60faec64f4283416d1c7e2c966, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: eeddff60faec64f4283416d1c7e2c966, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2301,6 +2498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Wall_LightStick (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.3556776
@@ -2397,7 +2598,7 @@ PrefabInstance:
     - target: {fileID: 4669696267412571924, guid: e9902843a37ce6348bb984a3a485b44a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4669696267412571924, guid: e9902843a37ce6348bb984a3a485b44a,
         type: 3}
@@ -2659,6 +2860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_GoldStack (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f17eb7c96704eb48a838c29654cd372, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f17eb7c96704eb48a838c29654cd372, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.282063
@@ -2719,6 +2924,10 @@ PrefabInstance:
     - target: {fileID: 1385012590202310, guid: ceba66e7108261e49bd88983ba7ab196, type: 3}
       propertyPath: m_Name
       value: Props_Skeleton_Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1385012590202310, guid: ceba66e7108261e49bd88983ba7ab196, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4453796516099316, guid: ceba66e7108261e49bd88983ba7ab196, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2789,6 +2998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone_Corner (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.260678
@@ -2858,6 +3071,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_WoodenChair_A (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1658090107040842, guid: d135cb7117e54144cada4a5862c08560, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4238827022925968, guid: d135cb7117e54144cada4a5862c08560, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.624678
@@ -2904,6 +3121,122 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d135cb7117e54144cada4a5862c08560, type: 3}
+--- !u!1 &327101600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 327101605}
+  - component: {fileID: 327101604}
+  - component: {fileID: 327101603}
+  - component: {fileID: 327101602}
+  - component: {fileID: 327101601}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &327101601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327101600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de91b16fb97ec0f45a2886cc6f8dc8e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1265152197}
+  healthText: {fileID: 2102036684}
+--- !u!114 &327101602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327101600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &327101603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327101600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &327101604
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327101600}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &327101605
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327101600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 37173164}
+  - {fileID: 341515943}
+  - {fileID: 2102036686}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!4 &331831471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9aabdb89511546649992db464a1ed8fe,
@@ -2935,6 +3268,85 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3352345, y: 0.3437292, z: 1.857085}
   m_Center: {x: 0, y: 0.1718646, z: 0}
+--- !u!1 &341515942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 341515943}
+  - component: {fileID: 341515945}
+  - component: {fileID: 341515944}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &341515943
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341515942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 327101605}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -387, y: 299}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &341515944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341515942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 27
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Health:
+
+'
+--- !u!222 &341515945
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341515942}
+  m_CullTransparentMesh: 0
 --- !u!4 &344962234 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9aabdb89511546649992db464a1ed8fe,
@@ -3045,7 +3457,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 64.457, y: 0, z: 0}
 --- !u!1001 &367273818
 PrefabInstance:
@@ -3057,6 +3469,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3130,6 +3546,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 882cde0458f610b438077a5ac1614cf9, type: 3}
       propertyPath: m_Name
       value: Props_Gold
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 882cde0458f610b438077a5ac1614cf9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 882cde0458f610b438077a5ac1614cf9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3255,6 +3675,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Wall_LightStick (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.648
@@ -3336,6 +3760,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3526dc3df867d3f4b85b8ff3b5543fa0, type: 3}
       propertyPath: m_Name
       value: Props_Skeleton_Skull (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3526dc3df867d3f4b85b8ff3b5543fa0, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3526dc3df867d3f4b85b8ff3b5543fa0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3431,6 +3859,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_PotionSmall_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3bc4d49d4ab84ca49ba8664f9e79e8a5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3bc4d49d4ab84ca49ba8664f9e79e8a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.13396
@@ -3491,6 +3923,10 @@ PrefabInstance:
     - target: {fileID: 1658090107040842, guid: d135cb7117e54144cada4a5862c08560, type: 3}
       propertyPath: m_Name
       value: Props_WoodenChair_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658090107040842, guid: d135cb7117e54144cada4a5862c08560, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4238827022925968, guid: d135cb7117e54144cada4a5862c08560, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3634,6 +4070,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3824,6 +4264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Candle_Fivestick
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 220061d04408b6047a6bf0ec87abb707, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 220061d04408b6047a6bf0ec87abb707, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.457678
@@ -3884,6 +4328,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 879374725dd7ac846bc86c2a0e4b9449, type: 3}
       propertyPath: m_Name
       value: Props_Coffin_Stone_WithCross (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 879374725dd7ac846bc86c2a0e4b9449, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 879374725dd7ac846bc86c2a0e4b9449, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3952,7 +4400,7 @@ GameObject:
   - component: {fileID: 465132945}
   m_Layer: 0
   m_Name: Pillars
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4201,7 +4649,7 @@ PrefabInstance:
     - target: {fileID: 4669696267412571924, guid: e9902843a37ce6348bb984a3a485b44a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4669696267412571924, guid: e9902843a37ce6348bb984a3a485b44a,
         type: 3}
@@ -4255,6 +4703,10 @@ PrefabInstance:
     - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_Name
       value: Props_Crate (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4343,6 +4795,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 161e026653300e84db5ddd2f076e7392, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Window (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 161e026653300e84db5ddd2f076e7392, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 161e026653300e84db5ddd2f076e7392, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4527,6 +4983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone_Corner (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.2446785
@@ -4627,6 +5087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_WoodenTable_B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d5b0e1a466949d4fba960d20ff062e6, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5d5b0e1a466949d4fba960d20ff062e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.204999
@@ -4692,6 +5156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Vase_Purple (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 096e3099085d8fb44aa34520f1ffb6c1, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 096e3099085d8fb44aa34520f1ffb6c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.712
@@ -4753,6 +5221,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone_Corner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.707678
@@ -4809,6 +5281,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4867,6 +5343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone_Corner (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5156784
@@ -4923,6 +5403,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 458a648ba3c812643b3bd0d730b1e75a, type: 3}
       propertyPath: m_Name
       value: Props_Coffin_Stone (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 458a648ba3c812643b3bd0d730b1e75a, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 458a648ba3c812643b3bd0d730b1e75a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5049,7 +5533,7 @@ PrefabInstance:
     - target: {fileID: 4669696267412571924, guid: e9902843a37ce6348bb984a3a485b44a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4669696267412571924, guid: e9902843a37ce6348bb984a3a485b44a,
         type: 3}
@@ -5151,6 +5635,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_Name
       value: Props_GoldPile (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5401,6 +5889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Crate (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.345678
@@ -5457,6 +5949,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_Name
       value: Props_GoldPile (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5539,6 +6035,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_GoldStack
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f17eb7c96704eb48a838c29654cd372, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f17eb7c96704eb48a838c29654cd372, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.301548
@@ -5612,6 +6112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone_Corner (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.48267746
@@ -5668,6 +6172,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3526dc3df867d3f4b85b8ff3b5543fa0, type: 3}
       propertyPath: m_Name
       value: Props_Skeleton_Skull
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3526dc3df867d3f4b85b8ff3b5543fa0, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3526dc3df867d3f4b85b8ff3b5543fa0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5866,6 +6374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Chest
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: eefec79bb2127ac43b18f4b669be81a8, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: eefec79bb2127ac43b18f4b669be81a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.630739
@@ -5948,6 +6460,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.943
@@ -6004,6 +6520,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3826082ed81a5b34aa60e1571bd7e31f, type: 3}
       propertyPath: m_Name
       value: Props_Bowl_Purple
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3826082ed81a5b34aa60e1571bd7e31f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3826082ed81a5b34aa60e1571bd7e31f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6066,6 +6586,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Pail
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5caaca51b16b8b344b0bb8593e5904af, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5caaca51b16b8b344b0bb8593e5904af, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.02583
@@ -6127,6 +6651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_GoldPile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.463678
@@ -6183,6 +6711,10 @@ PrefabInstance:
     - target: {fileID: 1242776226696080, guid: 3283d79c16b08544894c4416b9eecfc8, type: 3}
       propertyPath: m_Name
       value: Props_GoldPile
+      objectReference: {fileID: 0}
+    - target: {fileID: 1242776226696080, guid: 3283d79c16b08544894c4416b9eecfc8, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4782122063861334, guid: 3283d79c16b08544894c4416b9eecfc8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6357,6 +6889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_PotionBig_Purple
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f2a32cd0a73e6bd428f9ae17066d23f9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f2a32cd0a73e6bd428f9ae17066d23f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.803839
@@ -6418,6 +6954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Sword (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02751f16918ef9145af6b1592be02509, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 02751f16918ef9145af6b1592be02509, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.429998
@@ -6478,6 +7018,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 139e253bee1421a4ebad3da05ba220f6, type: 3}
       propertyPath: m_Name
       value: Props_WoodenChair_A (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 139e253bee1421a4ebad3da05ba220f6, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 139e253bee1421a4ebad3da05ba220f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6712,7 +7256,7 @@ Transform:
   m_LocalScale: {x: 19.9, y: 19.9, z: 19.9}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &751719000 stripped
 Transform:
@@ -6940,6 +7484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Crate (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.157
@@ -7022,6 +7570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Wall_LightStick (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.468
@@ -7078,6 +7630,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 220061d04408b6047a6bf0ec87abb707, type: 3}
       propertyPath: m_Name
       value: Props_Candle_Fivestick (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 220061d04408b6047a6bf0ec87abb707, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 220061d04408b6047a6bf0ec87abb707, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7145,6 +7701,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_Name
       value: Props_Wall_LightStick (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7338,6 +7898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_WoodenTable_A
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 78344275303d6c74faf72b359fe3a20a, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 78344275303d6c74faf72b359fe3a20a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.467678
@@ -7398,6 +7962,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7461,6 +8029,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 161e026653300e84db5ddd2f076e7392, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Window (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 161e026653300e84db5ddd2f076e7392, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 161e026653300e84db5ddd2f076e7392, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7534,6 +8106,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5d5b0e1a466949d4fba960d20ff062e6, type: 3}
       propertyPath: m_Name
       value: Props_WoodenTable_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d5b0e1a466949d4fba960d20ff062e6, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5d5b0e1a466949d4fba960d20ff062e6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7625,6 +8201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Candle_Fivestick
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 220061d04408b6047a6bf0ec87abb707, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 220061d04408b6047a6bf0ec87abb707, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.83422
@@ -7709,6 +8289,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_Name
       value: Props_Wall_LightStick (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7853,6 +8437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Crate (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.518
@@ -7935,6 +8523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.485
@@ -7995,6 +8587,10 @@ PrefabInstance:
     - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_Name
       value: Props_Crate (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8078,6 +8674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Wall_LightStick (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.776
@@ -8160,6 +8760,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.4286785
@@ -8222,6 +8826,10 @@ PrefabInstance:
     - target: {fileID: 1641868856143768, guid: a6708921f3701a44f976527854381306, type: 3}
       propertyPath: m_Name
       value: Props_Skeleton_Skull
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641868856143768, guid: a6708921f3701a44f976527854381306, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4943443195327920, guid: a6708921f3701a44f976527854381306, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8297,6 +8905,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 34bb02ede5cacfd41be006299c2f71c5, type: 3}
       propertyPath: m_Name
       value: Props_Crate
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 34bb02ede5cacfd41be006299c2f71c5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 34bb02ede5cacfd41be006299c2f71c5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8451,6 +9063,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.435
@@ -8564,6 +9180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Wall_LightStick (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.637
@@ -8620,6 +9240,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8687,6 +9311,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_Name
       value: Props_Wall_LightStick (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8770,6 +9398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.24
@@ -8830,6 +9462,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8943,7 +9579,7 @@ GameObject:
   - component: {fileID: 1089966770}
   m_Layer: 0
   m_Name: Props
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8955,15 +9591,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089966769}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.967678, y: -13.676529, z: 2.421203}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 465132945}
   - {fileID: 71705218}
   - {fileID: 1963614718}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1636609937}
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1090132014
 PrefabInstance:
@@ -8975,6 +9611,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9036,6 +9676,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9228,6 +9872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Vase_Red (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c292328f2498a254eaf0d4b6b668f9f5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c292328f2498a254eaf0d4b6b668f9f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.539
@@ -9289,6 +9937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_GoldPile
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.986678
@@ -9345,6 +9997,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9406,6 +10062,10 @@ PrefabInstance:
     - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_Name
       value: Props_Crate (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9469,6 +10129,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9562,6 +10226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Skeleton_Bone
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c37d03b2d34d64b41aca6ea526790314, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c37d03b2d34d64b41aca6ea526790314, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.410679
@@ -9629,6 +10297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.934
@@ -9689,6 +10361,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: a661718ece9c18d4cab4a62f9c2517ef, type: 3}
       propertyPath: m_Name
       value: Props_Bowl_Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a661718ece9c18d4cab4a62f9c2517ef, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a661718ece9c18d4cab4a62f9c2517ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9818,6 +10494,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_PotionBig_Purple
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f2a32cd0a73e6bd428f9ae17066d23f9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f2a32cd0a73e6bd428f9ae17066d23f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.334558
@@ -9879,6 +10559,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.943
@@ -9935,6 +10619,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9999,6 +10687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stairs_Curve_Stone
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: df1f043be57829a489acb70dc0d25580, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df1f043be57829a489acb70dc0d25580, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.237678
@@ -10059,6 +10751,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10140,6 +10836,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
       propertyPath: m_Name
       value: Props_Wall_Frame
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10348,6 +11048,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b84231388414ae64fba6938a1a35b11b, type: 3}
+--- !u!1 &1265152197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8607362363664336791, guid: b84231388414ae64fba6938a1a35b11b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1265152196}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1269071295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: f2a32cd0a73e6bd428f9ae17066d23f9,
@@ -10370,6 +11076,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_Name
       value: Props_Wall_LightStick (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10427,6 +11137,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7481d510d4603d3479b03d62aedd3f90, type: 3}
       propertyPath: m_Name
       value: Props_Bowl_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7481d510d4603d3479b03d62aedd3f90, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7481d510d4603d3479b03d62aedd3f90, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10488,6 +11202,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 401e70dad0e27154891bdf3770690a32, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Doorway
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 401e70dad0e27154891bdf3770690a32, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 401e70dad0e27154891bdf3770690a32, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10554,6 +11272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.248
@@ -10615,6 +11337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_PotionBig_Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 1843390223037274, guid: 49bdb26a254ee6642babd4ee87b0175a, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4231399028133458, guid: 49bdb26a254ee6642babd4ee87b0175a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.8493347
@@ -10672,6 +11398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Crate (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.51
@@ -10728,6 +11458,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_Name
       value: Props_Wall_LightStick (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10848,6 +11582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_GoldPile
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5919695
@@ -10936,6 +11674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_WoodenChair_A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1658090107040842, guid: d135cb7117e54144cada4a5862c08560, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4238827022925968, guid: d135cb7117e54144cada4a5862c08560, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.507678
@@ -10992,6 +11734,10 @@ PrefabInstance:
     - target: {fileID: 100004, guid: eefec79bb2127ac43b18f4b669be81a8, type: 3}
       propertyPath: m_Name
       value: Props_Chest (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: eefec79bb2127ac43b18f4b669be81a8, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: eefec79bb2127ac43b18f4b669be81a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11093,6 +11839,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Coffin_Stone
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 458a648ba3c812643b3bd0d730b1e75a, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 458a648ba3c812643b3bd0d730b1e75a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.107677
@@ -11167,6 +11917,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11296,6 +12050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_PotionBig_Blue (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0a31a7f9fa23056479c99568c3d073c3, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0a31a7f9fa23056479c99568c3d073c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.94
@@ -11362,6 +12120,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11454,6 +12216,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_Name
       value: Props_GoldPile (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11586,6 +12352,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
       propertyPath: m_Name
       value: Props_Wall_Frame (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11742,6 +12512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Crate (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.225
@@ -11875,7 +12649,7 @@ Transform:
   m_LocalScale: {x: 1.1097, y: 2.0126476, z: 0.35770774}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1442535053
 PrefabInstance:
@@ -11887,6 +12661,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11950,6 +12728,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12032,6 +12814,10 @@ PrefabInstance:
     - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_Name
       value: Props_Crate (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12150,6 +12936,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12279,6 +13069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.1
@@ -12345,6 +13139,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_Name
       value: Props_Wall_LightStick (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12434,6 +13232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Candle 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1342278782259176, guid: 2410a0af3b049904ebdca16fced505e7, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4610685488431642, guid: 2410a0af3b049904ebdca16fced505e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.586098
@@ -12516,6 +13318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Crate (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9518423
@@ -12573,6 +13379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Wall_LightStick (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.885
@@ -12629,6 +13439,10 @@ PrefabInstance:
     - target: {fileID: 1658090107040842, guid: d135cb7117e54144cada4a5862c08560, type: 3}
       propertyPath: m_Name
       value: Props_WoodenChair_A (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658090107040842, guid: d135cb7117e54144cada4a5862c08560, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4238827022925968, guid: d135cb7117e54144cada4a5862c08560, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12712,6 +13526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_WoodenTable_A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 78344275303d6c74faf72b359fe3a20a, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 78344275303d6c74faf72b359fe3a20a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.3789997
@@ -12773,6 +13591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Vase_Purple
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 096e3099085d8fb44aa34520f1ffb6c1, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 096e3099085d8fb44aa34520f1ffb6c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.833678
@@ -12833,6 +13655,10 @@ PrefabInstance:
     - target: {fileID: 1681745429080900, guid: 81a12ca8de8c275408c1be2ba93bb5b7, type: 3}
       propertyPath: m_Name
       value: Props_Skeleton_BoneStack
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681745429080900, guid: 81a12ca8de8c275408c1be2ba93bb5b7, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4847494067473882, guid: 81a12ca8de8c275408c1be2ba93bb5b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12902,6 +13728,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13056,7 +13886,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.7028, z: 2.0573}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1577262488 stripped
 GameObject:
@@ -13155,6 +13985,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone_Corner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.954678
@@ -13211,6 +14045,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 02751f16918ef9145af6b1592be02509, type: 3}
       propertyPath: m_Name
       value: Props_Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 02751f16918ef9145af6b1592be02509, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 02751f16918ef9145af6b1592be02509, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13273,6 +14111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Candle_Fivestick
       objectReference: {fileID: 0}
+    - target: {fileID: 1354111386606502, guid: ce232cf78c8168444b76d824e74bfabd, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4471790447988124, guid: ce232cf78c8168444b76d824e74bfabd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.029502
@@ -13329,6 +14171,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: ac9834608c6a7ef4bb7603deaf5efe8f, type: 3}
       propertyPath: m_Name
       value: Props_StoneHolder
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ac9834608c6a7ef4bb7603deaf5efe8f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ac9834608c6a7ef4bb7603deaf5efe8f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13422,6 +14268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Chest
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: eefec79bb2127ac43b18f4b669be81a8, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: eefec79bb2127ac43b18f4b669be81a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.718739
@@ -13478,6 +14328,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 879374725dd7ac846bc86c2a0e4b9449, type: 3}
       propertyPath: m_Name
       value: Props_Coffin_Stone_WithCross
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 879374725dd7ac846bc86c2a0e4b9449, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 879374725dd7ac846bc86c2a0e4b9449, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13548,6 +14402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Gold
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 882cde0458f610b438077a5ac1614cf9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 882cde0458f610b438077a5ac1614cf9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.702951
@@ -13611,6 +14469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Window
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 161e026653300e84db5ddd2f076e7392, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 161e026653300e84db5ddd2f076e7392, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.481678
@@ -13672,7 +14534,7 @@ GameObject:
   - component: {fileID: 1636609937}
   m_Layer: 0
   m_Name: walls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13715,6 +14577,7 @@ Transform:
   - {fileID: 492165461}
   - {fileID: 1862918188}
   - {fileID: 1775466670}
+  - {fileID: 1089966770}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13796,6 +14659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Doorway
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 401e70dad0e27154891bdf3770690a32, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 401e70dad0e27154891bdf3770690a32, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.22867775
@@ -13856,6 +14723,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 51924d025f1edfa45b8c761f37513868, type: 3}
       propertyPath: m_Name
       value: Props_WoodenPlank_Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 51924d025f1edfa45b8c761f37513868, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 51924d025f1edfa45b8c761f37513868, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13942,6 +14813,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_Name
       value: Props_GoldPile (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14061,6 +14936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.15
@@ -14117,6 +14996,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_Name
       value: Props_Wall_LightStick
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14175,6 +15058,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Crate (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.543
@@ -14231,6 +15118,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14292,6 +15183,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0a31a7f9fa23056479c99568c3d073c3, type: 3}
       propertyPath: m_Name
       value: Props_PotionBig_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0a31a7f9fa23056479c99568c3d073c3, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0a31a7f9fa23056479c99568c3d073c3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14468,7 +15363,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1705689102 stripped
 GameObject:
@@ -14604,6 +15499,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Barrel
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 14184199719f5be45bf3d8b6fd16d568, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 14184199719f5be45bf3d8b6fd16d568, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.0701113
@@ -14671,6 +15570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Wall_LightStick (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.512
@@ -14734,6 +15637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Gold (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 882cde0458f610b438077a5ac1614cf9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 882cde0458f610b438077a5ac1614cf9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.61089
@@ -14790,6 +15697,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
       propertyPath: m_Name
       value: Props_Wall_Frame (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14909,6 +15820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Wall_LightStick (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.6289997
@@ -14965,6 +15880,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
       propertyPath: m_Name
       value: Props_Wall_Frame (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15187,6 +16106,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_GoldPile (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.866
@@ -15250,6 +16173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Wall_LightStick (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.629
@@ -15306,6 +16233,10 @@ PrefabInstance:
     - target: {fileID: 1658090107040842, guid: d135cb7117e54144cada4a5862c08560, type: 3}
       propertyPath: m_Name
       value: Props_WoodenChair_A (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658090107040842, guid: d135cb7117e54144cada4a5862c08560, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4238827022925968, guid: d135cb7117e54144cada4a5862c08560, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15395,6 +16326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_PotionSmall_Red (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3bc4d49d4ab84ca49ba8664f9e79e8a5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3bc4d49d4ab84ca49ba8664f9e79e8a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.219
@@ -15461,6 +16396,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 220061d04408b6047a6bf0ec87abb707, type: 3}
       propertyPath: m_Name
       value: Props_Candle_Fivestick (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 220061d04408b6047a6bf0ec87abb707, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 220061d04408b6047a6bf0ec87abb707, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15529,6 +16468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Doorway (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 401e70dad0e27154891bdf3770690a32, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 401e70dad0e27154891bdf3770690a32, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.929
@@ -15594,6 +16537,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Wall_Frame (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.027678
@@ -15650,6 +16597,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 139e253bee1421a4ebad3da05ba220f6, type: 3}
       propertyPath: m_Name
       value: Props_WoodenChair_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 139e253bee1421a4ebad3da05ba220f6, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 139e253bee1421a4ebad3da05ba220f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15711,6 +16662,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3526dc3df867d3f4b85b8ff3b5543fa0, type: 3}
       propertyPath: m_Name
       value: Props_Skeleton_Skull (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3526dc3df867d3f4b85b8ff3b5543fa0, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3526dc3df867d3f4b85b8ff3b5543fa0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15905,6 +16860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Wall_Frame
       objectReference: {fileID: 0}
+    - target: {fileID: 1866799315535434, guid: 61d83192deb1b4d43b7f57a9bad73512, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4318285520637750, guid: 61d83192deb1b4d43b7f57a9bad73512, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.587678
@@ -15961,6 +16920,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_Name
       value: Props_Wall_LightStick (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16111,6 +17074,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone_Corner (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.157679
@@ -16167,6 +17134,10 @@ PrefabInstance:
     - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_Name
       value: Props_Crate (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16292,6 +17263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Doorway (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 401e70dad0e27154891bdf3770690a32, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 401e70dad0e27154891bdf3770690a32, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.248001
@@ -16369,6 +17344,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Crate
       objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.089836
@@ -16425,6 +17404,10 @@ PrefabInstance:
     - target: {fileID: 100004, guid: eefec79bb2127ac43b18f4b669be81a8, type: 3}
       propertyPath: m_Name
       value: Props_Chest (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: eefec79bb2127ac43b18f4b669be81a8, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: eefec79bb2127ac43b18f4b669be81a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16520,6 +17503,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Crate (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.006
@@ -16576,6 +17563,10 @@ PrefabInstance:
     - target: {fileID: 100004, guid: eefec79bb2127ac43b18f4b669be81a8, type: 3}
       propertyPath: m_Name
       value: Props_Chest (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: eefec79bb2127ac43b18f4b669be81a8, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: eefec79bb2127ac43b18f4b669be81a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16690,6 +17681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_GoldStack
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0f17eb7c96704eb48a838c29654cd372, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0f17eb7c96704eb48a838c29654cd372, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.439678
@@ -16750,6 +17745,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b09c7daa4c2d75248b8958ee5fcf32c2, type: 3}
       propertyPath: m_Name
       value: Props_Candle_Threestick
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b09c7daa4c2d75248b8958ee5fcf32c2, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b09c7daa4c2d75248b8958ee5fcf32c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16843,6 +17842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Barrel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 14184199719f5be45bf3d8b6fd16d568, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 14184199719f5be45bf3d8b6fd16d568, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.932678
@@ -16903,6 +17906,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_Name
       value: Props_Wall_LightStick (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 94a963044347f1f44a95dcc57f8c1145, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16967,7 +17974,7 @@ GameObject:
   - component: {fileID: 1963614718}
   m_Layer: 0
   m_Name: random_Props
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17199,6 +18206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_GoldPile (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f315a2ed5ce162a45a1d8da89e369c0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.486
@@ -17305,6 +18316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Crate (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.399
@@ -17393,6 +18408,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Wall_Frame (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2a1f7e528a2b88b41abb99a014083619, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.248678
@@ -17456,6 +18475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candle_Light
       objectReference: {fileID: 0}
+    - target: {fileID: 1540518425858772, guid: 45145d7e161280c4a9c3b644a71752ac, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4839470015990678, guid: 45145d7e161280c4a9c3b644a71752ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.622679
@@ -17512,6 +18535,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 77949a2e746354941821b639ac4162ff, type: 3}
       propertyPath: m_Name
       value: Props_Skeleton_BoneStack
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 77949a2e746354941821b639ac4162ff, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 77949a2e746354941821b639ac4162ff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17635,6 +18662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.4
@@ -17717,6 +18748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Crate (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.531678
@@ -17779,6 +18814,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 3d70b3ea5f25c9847a73471a78acbda5, type: 3}
       propertyPath: m_Name
       value: Props_Candle
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3d70b3ea5f25c9847a73471a78acbda5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3d70b3ea5f25c9847a73471a78acbda5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17846,6 +18885,10 @@ PrefabInstance:
     - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_Name
       value: Props_Crate (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094604788534416, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4626758430679836, guid: da853aa377ddc374d9acfb57eaa30736, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17943,7 +18986,7 @@ PrefabInstance:
     - target: {fileID: 4669696267412571924, guid: e9902843a37ce6348bb984a3a485b44a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4669696267412571924, guid: e9902843a37ce6348bb984a3a485b44a,
         type: 3}
@@ -18034,6 +19077,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Candle_Threestick
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b09c7daa4c2d75248b8958ee5fcf32c2, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b09c7daa4c2d75248b8958ee5fcf32c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5399513
@@ -18084,6 +19131,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b09c7daa4c2d75248b8958ee5fcf32c2, type: 3}
+--- !u!1 &2102036683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2102036686}
+  - component: {fileID: 2102036685}
+  - component: {fileID: 2102036684}
+  m_Layer: 5
+  m_Name: HEALTH
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2102036684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102036683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 27
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0
+--- !u!222 &2102036685
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102036683}
+  m_CullTransparentMesh: 0
+--- !u!224 &2102036686
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102036683}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 327101605}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -281, y: 299}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &2106378448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18217,6 +19341,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.24300003
@@ -18338,6 +19466,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f2a32cd0a73e6bd428f9ae17066d23f9, type: 3}
       propertyPath: m_Name
       value: Props_PotionBig_Purple (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f2a32cd0a73e6bd428f9ae17066d23f9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f2a32cd0a73e6bd428f9ae17066d23f9, type: 3}
       propertyPath: m_LocalPosition.x

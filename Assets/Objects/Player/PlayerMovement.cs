@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class PlayerMovement : MonoBehaviour
 {
+    public PlayerMovement instance;
+
     public float moveSpeed;
     private float normMoveSpeed;
     public float shieldMoveSpeed;
@@ -14,6 +18,10 @@ public class PlayerMovement : MonoBehaviour
 
     public float slowDownFactor = 0.9f;
     public float slowDownLength = 3f;
+
+    public float maxHealth;
+    public float health;
+
 
     public GameObject shield;
 
@@ -37,6 +45,9 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
+        health = maxHealth;
+
         theRB = GetComponent<Rigidbody>();
         //shield.SetActive(false);
 
@@ -47,13 +58,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+
         Time.timeScale += (1f / slowDownLength) * Time.unscaledDeltaTime;
         Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
-
-
-
-
-
+        
 
         theRB.velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, theRB.velocity.y, Input.GetAxis("Vertical") * moveSpeed);
 

@@ -110,6 +110,7 @@ MonoBehaviour:
     type: 3}
   player: {fileID: 8607362363664336791, guid: b84231388414ae64fba6938a1a35b11b, type: 3}
   shootTimerLength: 0.05
+  projSpeed: 11
   amountShot: 0
   shootCooldown: 1
   shootCooldownTimer: 0
