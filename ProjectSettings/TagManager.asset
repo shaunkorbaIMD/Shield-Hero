@@ -8,6 +8,7 @@ TagManager:
   - Projectile
   - Enemy
   - Wall
+  - FreezeManager
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - 
   - Enemies
-  - 
+  - Wall + Player
   - 
   - 
   - 

@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 719173761650333142}
   m_LocalRotation: {x: -0, y: -0.99949646, z: -0, w: -0.031730946}
-  m_LocalPosition: {x: -0.05, y: -0.04999978, z: 0.13}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.02, y: -0.04999978, z: -0.177}
+  m_LocalScale: {x: 1, y: 1, z: 1.8476}
   m_Children: []
   m_Father: {fileID: 5613830598531965731}
   m_RootOrder: 1
@@ -4927,8 +4927,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7352356463840717734}
   m_LocalRotation: {x: -0, y: -0.7027249, z: -0, w: 0.7114617}
-  m_LocalPosition: {x: -7.29, y: 1.0819513, z: 0.35}
-  m_LocalScale: {x: 0.3097708, y: 0.3097708, z: 0.4223415}
+  m_LocalPosition: {x: -7.238, y: 1.0819513, z: 0.349}
+  m_LocalScale: {x: 0.2133454, y: 0.2133454, z: 0.37554887}
   m_Children:
   - {fileID: 5625514125614926302}
   - {fileID: 7381552672055988061}
@@ -4994,6 +4994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be96e3c1867dfb048a848be57663d6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 0}
   thisRB: {fileID: -2971653550433789623}
   trail: {fileID: 1666622562731263761}
   particleSys: {fileID: 3884792654226534097}

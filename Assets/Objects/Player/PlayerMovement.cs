@@ -34,7 +34,8 @@ public class PlayerMovement : MonoBehaviour
     public float cdTimer_reset;
     
     public float coolDown;
-    
+
+    Freezer _freezer;
 
     void slowTime()
     {
@@ -48,6 +49,14 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject mgr = GameObject.FindWithTag("FreezeManager");
+
+        if (mgr)
+        {
+            _freezer = mgr.GetComponent<Freezer>();
+        }
+
+
         instance = this;
         health = maxHealth;
 
@@ -58,16 +67,26 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    // What to do when hit
+    public void Ouch()
+    {
+        cam.GetComponent<CameraFollow>().ShakeTheCamera(1.0f);
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (_freezer._isFrozen == true)
+        {
+            return;
+        }
+
         if (health <= 0)
         {
             SceneManager.LoadScene("MainMenu");
         }
 
-        Time.timeScale += (1f / slowDownLength) * Time.unscaledDeltaTime;
-        Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
+
         
 
         theRB.velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, theRB.velocity.y, Input.GetAxis("Vertical") * moveSpeed);
@@ -98,18 +117,26 @@ public class PlayerMovement : MonoBehaviour
 
         // SLOWING TIME ////////////////////////////////////////////////////////
 
-        if (Input.GetMouseButton(1)) //right click
-        {
-            slowTime();
+            
+
+            Time.timeScale += (1f / slowDownLength) * Time.unscaledDeltaTime;
+            Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
+            
+
+
+            if (Input.GetMouseButton(1)) //right click
+            {
+                slowTime();
 
 
 
-            cam.GetComponent<CameraFollow>().offset = Vector3.Lerp(offset, startOffset + new Vector3(0, -1, 1), 0.01f);
-        } else
-        {
-            cam.GetComponent<CameraFollow>().offset = Vector3.Lerp(offset, startOffset, 0.04f);
-        }
-
+                cam.GetComponent<CameraFollow>().offset = Vector3.Lerp(offset, startOffset + new Vector3(0, -1, 1), 0.01f);
+            }
+            else
+            {
+                cam.GetComponent<CameraFollow>().offset = Vector3.Lerp(offset, startOffset, 0.04f);
+            }
+        
         // TAKING OUT SHIELD ////////////////////////////////////////////////////////
 
         

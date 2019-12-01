@@ -89,8 +89,7 @@ public class projectileCode : MonoBehaviour
 
             if (Physics.Raycast(r, out hit, Mathf.Infinity, 1 << 8))
             {
-
-                Debug.Log("Will");
+                
                 shouldHit = true;
 
                 vec = Vector3.Normalize(hit.transform.position - transform.position);
@@ -105,8 +104,6 @@ public class projectileCode : MonoBehaviour
                 Debug.DrawRay(r.origin, r.direction * 20, Color.red, 1);
                 if (Physics.Raycast(r, out hit, Mathf.Infinity, 1 << 8))
                 {
-
-                    Debug.Log("redWill");
                     shouldHit = true;
 
                     vec = Vector3.Normalize(hit.transform.position - transform.position);
@@ -121,8 +118,6 @@ public class projectileCode : MonoBehaviour
 
                     if (Physics.Raycast(r, out hit, Mathf.Infinity, 1 << 8))
                     {
-
-                        Debug.Log("greenWill");
                         shouldHit = true;
 
                         vec = Vector3.Normalize(hit.transform.position - transform.position);
@@ -133,8 +128,6 @@ public class projectileCode : MonoBehaviour
                         Debug.DrawRay(r.origin, r.direction * 20, Color.yellow, 1);
                         if (Physics.Raycast(r, out hit, Mathf.Infinity, 1 << 8))
                         {
-
-                            Debug.Log("yellowWill");
                             shouldHit = true;
 
                             vec = Vector3.Normalize(hit.transform.position - transform.position);
@@ -146,8 +139,6 @@ public class projectileCode : MonoBehaviour
                             Debug.DrawRay(r.origin, r.direction * 20, Color.blue, 1);
                             if (Physics.Raycast(r, out hit, Mathf.Infinity, 1 << 8))
                             {
-
-                                Debug.Log("blueWill");
                                 shouldHit = true;
 
                                 vec = Vector3.Normalize(hit.transform.position - transform.position);
@@ -214,12 +205,14 @@ public class projectileCode : MonoBehaviour
         {
             //PlayerMovement.health--;
             col.gameObject.GetComponent<PlayerMovement>().instance.health--;
+            col.gameObject.GetComponent<PlayerMovement>().Ouch();
+
             Destroy(gameObject);
         }
 
         if (col.gameObject.tag == "Enemy")
         {
-            Destroy(col.gameObject);
+            col.gameObject.GetComponent<enemyAI>().Die();
             Destroy(gameObject);
             
         }

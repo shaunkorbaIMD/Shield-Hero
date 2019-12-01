@@ -16,11 +16,25 @@ public class enemyAI : MonoBehaviour
 
     public float shootCooldown;
     public float shootCooldownTimer;
+    
 
+    public ParticleSystem deathParts;
+
+    public float killFreezeDuration = 0.2f;
+
+    Freezer _freezer;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        GameObject mgr = GameObject.FindWithTag("FreezeManager");
+
+        if(mgr)
+        {
+            _freezer = mgr.GetComponent<Freezer>();
+        }
+
         player = GameObject.FindGameObjectWithTag("Player");
 
         amountShot = 5;
@@ -28,10 +42,50 @@ public class enemyAI : MonoBehaviour
         shootCooldownTimer = 1f+Random.Range(0f, 4f);
     }
 
+    public void Die()
+    {
+        _freezer.Freeze(killFreezeDuration);
+        Instantiate(deathParts, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+        
+    }
+
+
     // Update is called once per frame
     void Update()
     {
+        
+        Vector3 toPlayer = player.transform.position - transform.position;
 
+        toPlayer.y = player.transform.position.y + 0.24f;
+
+        
+
+        Ray r = new Ray(transform.position, toPlayer);
+        Debug.DrawRay(r.origin, r.direction * 20, Color.white, 1);
+        RaycastHit hit;
+
+        bool playerInSight = false;
+
+        if (Physics.Raycast(r, out hit, Mathf.Infinity, 1 << 9))
+        {
+            
+
+            if (hit.collider.tag != "Wall" )
+            {
+                Debug.Log(hit.collider.tag);
+                playerInSight = true;
+                
+            }
+        }
+
+        if(!playerInSight)
+        {
+            return;
+        }
+
+
+        transform.LookAt(player.transform.position);
 
         //burst shooting
         if (amountShot >= 2)
@@ -39,17 +93,21 @@ public class enemyAI : MonoBehaviour
             if (shootCooldownTimer > 0)
             {
                 shootCooldownTimer -= Time.deltaTime;
-            } else {
+            }
+            else
+            {
                 amountShot = 0;
             }
 
-        } else if (amountShot < 2 && Vector3.Magnitude(player.transform.position - transform.position) < 18f) {
+        }
+        else if (amountShot < 2 && Vector3.Magnitude(player.transform.position - transform.position) < 18f)
+        {
 
             if (shootTimer < 0)
             {
                 GameObject p = Instantiate(projectile, transform.position, transform.rotation);
 
-                
+
 
                 var vel = player.GetComponent<Rigidbody>().velocity;
 
@@ -63,7 +121,7 @@ public class enemyAI : MonoBehaviour
                 shootTimer = shootTimerLength;
                 amountShot += 1;
 
-                if(amountShot>=2)
+                if (amountShot >= 2)
                 {
                     shootCooldownTimer = shootCooldown + Random.Range(0f, 5f);
                 }
@@ -75,9 +133,5 @@ public class enemyAI : MonoBehaviour
             }
         }
 
-        
-        
-
-
-    }//end of update
+    }
 }
