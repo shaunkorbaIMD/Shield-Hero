@@ -37,13 +37,20 @@ public class PlayerMovement : MonoBehaviour
 
     Freezer _freezer;
 
+    PauseMenu pauseMenu;
+
     void slowTime()
     {
-        //Time.timeScale = slowDownFactor;
-        Time.timeScale -= (3f / slowDownLength) * Time.unscaledDeltaTime;
-        Time.timeScale = Mathf.Clamp(Time.timeScale, slowDownFactor, 1f);
 
-        Time.fixedDeltaTime = Time.timeScale * 0.02f;
+        
+        
+            //Time.timeScale = slowDownFactor;
+            Time.timeScale -= (3f / slowDownLength) * Time.unscaledDeltaTime;
+            Time.timeScale = Mathf.Clamp(Time.timeScale, slowDownFactor, 1f);
+
+            Time.fixedDeltaTime = Time.timeScale * 0.02f;
+        
+        
     }
 
     // Start is called before the first frame update
@@ -76,10 +83,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_freezer._isFrozen == true)
+
+        if (_freezer._isFrozen == true || PauseMenu.GameIsPaused == true)
         {
             return;
         }
+       
 
         if (health <= 0)
         {

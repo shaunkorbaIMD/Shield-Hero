@@ -73,7 +73,7 @@ public class enemyAI : MonoBehaviour
 
             if (hit.collider.tag != "Wall" )
             {
-                Debug.Log(hit.collider.tag);
+                //Debug.Log(hit.collider.tag);
                 playerInSight = true;
                 
             }
