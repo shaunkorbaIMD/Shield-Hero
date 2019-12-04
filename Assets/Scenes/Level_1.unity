@@ -562,15 +562,20 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -8283378722905753918, guid: 4e8e273cceb02414a90c90a33f317c8d,
+    - target: {fileID: 8968310339953397365, guid: 4e8e273cceb02414a90c90a33f317c8d,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.0052
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -4880481721855917552, guid: 4e8e273cceb02414a90c90a33f317c8d,
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8283378722905753918, guid: 4e8e273cceb02414a90c90a33f317c8d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0052
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4e8e273cceb02414a90c90a33f317c8d,
         type: 3}
@@ -651,11 +656,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8968310339953397365, guid: 4e8e273cceb02414a90c90a33f317c8d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -6057140222963153312, guid: 4e8e273cceb02414a90c90a33f317c8d, type: 3}
@@ -11177,11 +11177,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 5672143944716604510, guid: b84231388414ae64fba6938a1a35b11b,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 6159f8f2aa5d343498979f27ed9e9e1a, type: 2}
     - target: {fileID: 5517614356942956704, guid: b84231388414ae64fba6938a1a35b11b,
         type: 3}
       propertyPath: m_Layer
@@ -11441,6 +11436,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5672143944716604510, guid: b84231388414ae64fba6938a1a35b11b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6159f8f2aa5d343498979f27ed9e9e1a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b84231388414ae64fba6938a1a35b11b, type: 3}
 --- !u!54 &1105101386 stripped
@@ -11558,7 +11558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 788477717}
   healthText: {fileID: 1398407424}
-  playerMovement: {fileID: 0}
+  playerMovement: {fileID: 788477723}
 --- !u!114 &1111346342
 MonoBehaviour:
   m_ObjectHideFlags: 0
