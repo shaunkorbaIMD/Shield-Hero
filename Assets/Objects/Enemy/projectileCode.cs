@@ -108,7 +108,7 @@ public class projectileCode : MonoBehaviour
             RaycastHit hit;
 
             bool shouldHit = false;
-
+            //Will the first ray hit an enemy?
             if (Physics.Raycast(r, out hit, Mathf.Infinity, 1 << 8))
             {
                 
@@ -118,7 +118,7 @@ public class projectileCode : MonoBehaviour
 
 
             }
-            else
+            else //No? well then will another ray rotated to the right hit?
             {
 
                 r.direction = Quaternion.AngleAxis(4, Vector3.up) * r.direction;
@@ -131,9 +131,8 @@ public class projectileCode : MonoBehaviour
                     vec = Vector3.Normalize(hit.transform.position - transform.position);
 
                 }
-                else
-                { //if this ray didn't pickup an enemy..
-
+                else // No? well then will another ray rotated to the left hit?
+                { 
                     r.direction = Quaternion.AngleAxis(-8, Vector3.up) * r.direction;
 
                     Debug.DrawRay(r.origin, r.direction * 20, Color.green, 1);
@@ -143,7 +142,7 @@ public class projectileCode : MonoBehaviour
                         shouldHit = true;
 
                         vec = Vector3.Normalize(hit.transform.position - transform.position);
-                    } else
+                    } else // ETC. if they don't hit, this string of if and else statements create a fan of Rays to check for enemy collision
                     {
                         r.direction = Quaternion.AngleAxis(-4, Vector3.up) * r.direction;
 
@@ -174,23 +173,27 @@ public class projectileCode : MonoBehaviour
 
             }
             
-
+            //If any of the rays hit an enemy, then "shouldHit" was set to true.
 
             if (shouldHit == true)
             {
+
+                //Set to the direction needed to hit the enemy the ray collided with
                 vel = vec;
             }
 
             
+            //Set Velocity
             thisRB.velocity = vel * thisRB.velocity.magnitude * 1.2f;
 
-            // Lock Velocity
+            // Lock Velocity (Prevents the projectile's RB from losing it's velocity)
 
                 lockedVelocity = thisRB.velocity;
                 velIsLocked = true;
 
 
             var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
             //Does collide with enemies
             foreach (var enemy in enemies)
             {
@@ -224,10 +227,7 @@ public class projectileCode : MonoBehaviour
         }
 
         if (col.gameObject.tag == "Player")
-        {
-            
-            //PlayerMovement.health--;
-            col.gameObject.GetComponent<PlayerMovement>().instance.health--;
+        {         
             col.gameObject.GetComponent<PlayerMovement>().Ouch();
             col.gameObject.GetComponent<PlayerMovement>().hitSound();
             Destroy(gameObject);
@@ -235,8 +235,15 @@ public class projectileCode : MonoBehaviour
 
         if (col.gameObject.tag == "Enemy")
         {
-            col.gameObject.GetComponent<enemyAI>().Die();
-            Destroy(gameObject);
+            var enemyAi = col.gameObject.GetComponent<enemyAI>();
+            //Delete the projectile only if this enemy hasn't already been hit
+            if (enemyAi.isHit != true)
+            {
+                Destroy(gameObject);
+            }
+
+
+            enemyAi.Die();
             
         }
         

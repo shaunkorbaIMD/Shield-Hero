@@ -15,14 +15,21 @@ public class enemyAI : MonoBehaviour
     public float amountShot = 0;
 
     public float shootCooldown;
-    public float shootCooldownTimer;
+    public float shootshieldDuration;
     
 
     public ParticleSystem deathParts;
 
-    public float killFreezeDuration = 0.2f;
+    public float killFreezeDuration = 0.08f;
 
     Freezer _freezer;
+
+    public Animator animator;
+
+    private bool isAttacking = false;
+    public bool isHit = false;
+
+    private float dyingTimer = -1f;
 
     // Start is called before the first frame update
     void Start()
@@ -39,22 +46,56 @@ public class enemyAI : MonoBehaviour
 
         amountShot = 5;
 
-        shootCooldownTimer = 1f+Random.Range(0f, 4f);
+        shootshieldDuration = 0.6f+Random.Range(0f, 2f);
     }
 
     public void Die()
     {
+
+        GetComponent<Collider>().enabled = false;
+
         _freezer.Freeze(killFreezeDuration);
+
+        isHit = true;
+
+
+        dyingTimer = 10;
         Instantiate(deathParts, transform.position, Quaternion.identity);
-        Destroy(gameObject);
         
+        
+
+
     }
 
+    
 
     // Update is called once per frame
     void Update()
     {
-        
+        // Set the animator states
+
+        animator.SetBool("isAttacking", isAttacking);
+        animator.SetBool("isHit", isHit);
+
+
+        // Control the states
+
+        if (isHit)
+        {
+            if (dyingTimer > 0)
+            {
+                dyingTimer -= 10f * Time.deltaTime;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+
+            return;
+        }
+
+
+
         Vector3 toPlayer = player.transform.position - transform.position;
 
         toPlayer.y = player.transform.position.y + 0.24f;
@@ -85,23 +126,33 @@ public class enemyAI : MonoBehaviour
         }
 
 
-        transform.LookAt(player.transform.position);
+        Vector3 playerPos = player.transform.position;
+
+        playerPos = new Vector3(playerPos.x, gameObject.transform.position.y, playerPos.z);
+
+        transform.LookAt(playerPos);
 
         //burst shooting
         if (amountShot >= 2)
         {
-            if (shootCooldownTimer > 0)
+            
+            isAttacking = false;
+            
+
+            if (shootshieldDuration > 0)
             {
-                shootCooldownTimer -= Time.deltaTime;
+                shootshieldDuration -= Time.deltaTime;
             }
             else
             {
+                
                 amountShot = 0;
             }
 
         }
         else if (amountShot < 2 && Vector3.Magnitude(player.transform.position - transform.position) < 18f)
         {
+            isAttacking = true;
 
             if (shootTimer < 0)
             {
@@ -123,7 +174,7 @@ public class enemyAI : MonoBehaviour
 
                 if (amountShot >= 2)
                 {
-                    shootCooldownTimer = shootCooldown + Random.Range(0f, 5f);
+                    shootshieldDuration = shootCooldown + Random.Range(0f, 5f);
                 }
 
             }
@@ -133,5 +184,10 @@ public class enemyAI : MonoBehaviour
             }
         }
 
+
+        
+
+       
+        
     }
 }

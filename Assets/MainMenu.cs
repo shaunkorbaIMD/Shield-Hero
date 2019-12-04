@@ -38,7 +38,15 @@ public class MainMenu : MonoBehaviour
     public void LoadTutorial()
     {
         audioSource.PlayOneShot(selectSound, 0.9f);
-        SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene("tutorial_preScene");
     }
-
+    public void PlayTutorialScene()
+    {
+        SceneManager.LoadScene("tutorial");
+        
+    }
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

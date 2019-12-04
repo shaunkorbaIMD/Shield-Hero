@@ -20,8 +20,7 @@ public class setHealth : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        //healthText.text = PlayerMovement.health.ToString();
-       healthText.text = player.GetComponent<PlayerMovement>().health.ToString();        
+    { 
+       healthText.text = player.GetComponent<PlayerMovement>().playerHealthToText().ToString();        
     }
 }
