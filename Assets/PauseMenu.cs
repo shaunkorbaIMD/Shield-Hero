@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject InGameMenuUI;
 
+    public AudioClip selectSound;
+    AudioSource audioSource;
 
     void Update()
     {
@@ -25,10 +27,19 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+        audioSource = GetComponent<AudioSource>();
+
+
     }//Update end
+
+    public void PlayOneShot(AudioClip clip, float volumeScale = 1.0F)
+    {
+
+    }
 
     public void Resume()
     {
+        audioSource.PlayOneShot(selectSound, 0.9f);
         PauseMenuUI.SetActive(false);
         InGameMenuUI.SetActive(true);
         Time.timeScale = 1f;
@@ -37,6 +48,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        audioSource.PlayOneShot(selectSound, 0.9f);
         PauseMenuUI.SetActive(true);
         InGameMenuUI.SetActive(false);
         Time.timeScale = 0f;
@@ -45,12 +57,14 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+        audioSource.PlayOneShot(selectSound, 0.9f);
         SceneManager.LoadScene("MainMenu");
     }
     public void QuitGame()
     {
-       Debug.Log("Quitting game...");
-       Application.Quit();
+        audioSource.PlayOneShot(selectSound, 0.9f);
+        Debug.Log("Quitting game...");
+        Application.Quit();
     }
 
 

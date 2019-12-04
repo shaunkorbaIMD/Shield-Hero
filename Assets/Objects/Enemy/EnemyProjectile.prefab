@@ -4995,6 +4995,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be96e3c1867dfb048a848be57663d6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deflected: {fileID: 8300000, guid: 764ca4188f3705547b7d66ab7a3dcbe7, type: 3}
+  deflected2: {fileID: 8300000, guid: 403e62ff95982a943b64a34b2898ad36, type: 3}
+  deflected3: {fileID: 8300000, guid: 9f4cf894a0e97214498d107e1fb736c7, type: 3}
+  playerHit: {fileID: 8300000, guid: f7d601db548a87045a8377eea21613d8, type: 3}
   playerMovement: {fileID: 0}
   thisRB: {fileID: -2971653550433789623}
   trail: {fileID: 1666622562731263761}

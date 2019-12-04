@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     public float cooldownTimer;
 
     public float cdTimer;
+
     public float cdTimer_reset;
     
     public float coolDown;
@@ -39,17 +40,28 @@ public class PlayerMovement : MonoBehaviour
 
     PauseMenu pauseMenu;
 
+    public AudioClip playerHit;
+    public AudioClip playerDeath;
+    public AudioClip footsteps;
+
+    AudioSource audioSource;
+
+    public int frame;
+    public int frameWaitLength;
+
+    IEnumerator FrameWait()
+    {  
+        yield return new WaitUntil(() => frame >= 10);   
+    }
+
     void slowTime()
     {
-
-        
-        
+  
             //Time.timeScale = slowDownFactor;
             Time.timeScale -= (3f / slowDownLength) * Time.unscaledDeltaTime;
             Time.timeScale = Mathf.Clamp(Time.timeScale, slowDownFactor, 1f);
 
-            Time.fixedDeltaTime = Time.timeScale * 0.02f;
-        
+            Time.fixedDeltaTime = Time.timeScale * 0.02f; 
         
     }
 
@@ -57,6 +69,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         GameObject mgr = GameObject.FindWithTag("FreezeManager");
+
+        StartCoroutine(FrameWait());
 
         if (mgr)
         {
@@ -71,13 +85,24 @@ public class PlayerMovement : MonoBehaviour
         //shield.SetActive(false);
 
         normMoveSpeed = moveSpeed;
+        audioSource = GetComponent<AudioSource>();
 
+        frameWaitLength = 6;
     }
 
+
+    public void PlayOneShot(AudioClip clip, float volumeScale = 1.0F)
+    {
+
+    }
     // What to do when hit
     public void Ouch()
+    {   
+        cam.GetComponent<CameraFollow>().ShakeTheCamera(1.0f);    
+    }
+    public void hitSound()
     {
-        cam.GetComponent<CameraFollow>().ShakeTheCamera(1.0f);
+        audioSource.PlayOneShot(playerHit, 0.7f);
     }
 
     // Update is called once per frame
@@ -88,18 +113,33 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-       
+
 
         if (health <= 0)
         {
+            audioSource.PlayOneShot(playerDeath, 0.7f);
             SceneManager.LoadScene("MainMenu");
         }
 
-
-        
+        if (frame <= frameWaitLength)
+        {
+            //Debug.Log("Frame: " + frame);
+            frame++;
+        }
+        else if (frame > frameWaitLength)
+        {
+            frame = 0;
+        }
 
         theRB.velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, theRB.velocity.y, Input.GetAxis("Vertical") * moveSpeed);
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            if (frame == frameWaitLength)
+            {
+                audioSource.PlayOneShot(footsteps, 0.7f);
+            }
 
+        }
         //cooldownTimer
         if (cooldownTimer < 0)
         {

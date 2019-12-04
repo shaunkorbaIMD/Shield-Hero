@@ -5,6 +5,12 @@ using UnityEngine;
 public class projectileCode : MonoBehaviour
 {
 
+    public AudioClip deflected;
+    public AudioClip deflected2;
+    public AudioClip deflected3;
+    public AudioClip playerHit;
+    AudioSource audioSource;
+
     public PlayerMovement playerMovement;
 
     public Rigidbody thisRB;
@@ -17,6 +23,7 @@ public class projectileCode : MonoBehaviour
     private bool velIsLocked = false;
 
     public Material reflectedMat;
+
 
     private PlayerMovement p;
 
@@ -40,8 +47,8 @@ public class projectileCode : MonoBehaviour
             if (!(enemy.GetComponent<Collider>() == GetComponent<Collider>()))
                 Physics.IgnoreCollision(enemy.GetComponent<Collider>(), GetComponent<Collider>());
         }
-        
-        
+
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -54,17 +61,32 @@ public class projectileCode : MonoBehaviour
         }
         transform.forward = GetComponent<Rigidbody>().velocity;
 
-        Transform[] enemTrans = new Transform[3];
+        Transform[] enemTrans = new Transform[3];    
 
-        
     }
 
-    
+    public void PlayOneShot(AudioClip clip, float volumeScale = 1.0F)
+    {
+
+    }
 
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "Shield")
         {
+            float randNum = Random.Range(0.0f, 30.0f);
+            //Debug.Log("RandNum = " + randNum);
+            if (randNum < 10.0f)
+            {
+                audioSource.PlayOneShot(deflected, 0.7f);
+            }else if (randNum >= 10.0f && randNum < 20.0f)
+            {
+                audioSource.PlayOneShot(deflected2, 0.7f);
+            }
+            else{
+                audioSource.PlayOneShot(deflected3, 0.7f);
+            }
+            
 
             Vector3 vel = Vector3.Normalize(thisRB.velocity);
 
@@ -203,10 +225,11 @@ public class projectileCode : MonoBehaviour
 
         if (col.gameObject.tag == "Player")
         {
+            
             //PlayerMovement.health--;
             col.gameObject.GetComponent<PlayerMovement>().instance.health--;
             col.gameObject.GetComponent<PlayerMovement>().Ouch();
-
+            col.gameObject.GetComponent<PlayerMovement>().hitSound();
             Destroy(gameObject);
         }
 
