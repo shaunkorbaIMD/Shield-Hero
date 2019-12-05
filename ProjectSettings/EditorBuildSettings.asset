@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_5.unity
     guid: 95fd220c62a62c84894e1e1055d39d1a
+  - enabled: 1
+    path: Assets/Scenes/winningScreen.unity
+    guid: f8f3aa64e0004b34890cc9545a3c7954
   m_configObjects: {}

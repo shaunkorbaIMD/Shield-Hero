@@ -10,6 +10,7 @@ public class loadWinningScreen : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             SceneManager.LoadScene("winningScreen");
+            Debug.Log("Game Won");
         }
     }
 }

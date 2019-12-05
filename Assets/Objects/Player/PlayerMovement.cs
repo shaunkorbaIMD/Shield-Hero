@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     //Health Variables
-    static public float maxHealth = 15f;
+    static public float maxHealth = 10f;
     static public float health = maxHealth;
     
     //Shield and cooldown/"mana" variable
@@ -62,10 +62,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isCasting = false;
     private bool isHit = false;
 
-
     
-
-
+    //Timer
     IEnumerator FrameWait()
     {  
         yield return new WaitUntil(() => frame >= 10);   
@@ -73,8 +71,6 @@ public class PlayerMovement : MonoBehaviour
 
     void slowTime()
     {
-  
-            //Time.timeScale = slowDownFactor;
             Time.timeScale -= (3f / slowDownLength) * Time.unscaledDeltaTime;
             Time.timeScale = Mathf.Clamp(Time.timeScale, slowDownFactor, 1f);
 
@@ -85,6 +81,13 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // At the start of each room, regenerate 2 hp, but don't exceed maximum health
+        health += 2;
+        if(health>maxHealth)
+        {
+            health = maxHealth;
+        }
+
         //Get freeze manager to check if the frame is frozen
         GameObject mgr = GameObject.FindWithTag("FreezeManager");
 
@@ -168,10 +171,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isDead", isDead);
         animator.SetBool("isHit", isHit);
         animator.SetBool("isCasting", isCasting);
-
-
-        Debug.Log("isMoving: " + isMoving + ". shieldActivate: " + shieldActive);
-
+        
 
         //If out of health, play death animation, and play deathSound
         if (health <= 0)
@@ -271,7 +271,7 @@ public class PlayerMovement : MonoBehaviour
             //Set anim state
             shieldActive = true;
 
-            shieldDuration -= Time.unscaledDeltaTime;
+            shieldDuration -= Time.deltaTime;
 
             if(shieldDuration < 0)
             {
@@ -295,7 +295,10 @@ public class PlayerMovement : MonoBehaviour
 
             if (shieldWaitTime > 0)
             {
-                shieldWaitTime -= Time.unscaledDeltaTime * 5f; 
+                shieldWaitTime -= Time.unscaledDeltaTime * 5f;
+                //Use unscaled deltaTime for waiting for the regen so player won't need to wait as long to start regening when time is slowed
+
+                //Though, the rate of depletion and regen are affected by slowed time
             }
 
 
@@ -306,7 +309,7 @@ public class PlayerMovement : MonoBehaviour
         //If the wait is over since last shield activate, start recharging
         if(shieldWaitTime == 0 && shield.active == false)
         {
-            shieldDuration += Time.unscaledDeltaTime*3f;
+            shieldDuration += Time.deltaTime*3f;
 
             if(shieldDuration > shieldDurationLength)
             {

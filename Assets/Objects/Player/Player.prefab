@@ -70,13 +70,17 @@ MonoBehaviour:
   theRB: {fileID: 6207235717413829723}
   slowDownFactor: 0.2
   slowDownLength: 1
-  maxHealth: 5
-  health: 0
   shield: {fileID: 0}
-  cooldownTimer: 0
-  cdTimer: 0
-  cdTimer_reset: 0
+  shieldDuration: 0
+  shieldDurationLength: 20
+  shieldWaitTimeLength: 0.02
   coolDown: 0
+  playerHit: {fileID: 0}
+  playerDeath: {fileID: 0}
+  footsteps: {fileID: 0}
+  frame: 0
+  frameWaitLength: 0
+  animator: {fileID: 0}
 --- !u!65 &4423146575995840297
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88,8 +92,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 1, z: 0.5}
-  m_Center: {x: 0.05, y: 1.1, z: -0.1}
+  m_Size: {x: 0.4, y: 1, z: 0.3}
+  m_Center: {x: 0, y: 1.1, z: 0}
 --- !u!95 &4573130418825302968
 Animator:
   serializedVersion: 3
@@ -116,11 +120,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4695046246871692676}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 2709da84fa7fb8945b14ddc2175f74da,
-        type: 3}
-      propertyPath: m_Name
-      value: Hero
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2709da84fa7fb8945b14ddc2175f74da,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -190,6 +189,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 14.314275
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 2709da84fa7fb8945b14ddc2175f74da,
+        type: 3}
+      propertyPath: m_Name
+      value: Hero
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2709da84fa7fb8945b14ddc2175f74da, type: 3}
