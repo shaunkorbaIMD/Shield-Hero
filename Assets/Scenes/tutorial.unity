@@ -5029,6 +5029,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8696859, y: 1.911628, z: 0.9228995}
   m_Center: {x: 0.019209892, y: 0.9562825, z: -0.015293062}
+--- !u!95 &1068709675 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5672143944716604510, guid: b84231388414ae64fba6938a1a35b11b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1669232799}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1070281945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7810,6 +7816,11 @@ PrefabInstance:
       propertyPath: footsteps
       value: 
       objectReference: {fileID: 8300000, guid: bd6feb6ba39de7640ae7e13322ac8021, type: 3}
+    - target: {fileID: -1544594687891150980, guid: b84231388414ae64fba6938a1a35b11b,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1068709675}
     - target: {fileID: 4423146575995840297, guid: b84231388414ae64fba6938a1a35b11b,
         type: 3}
       propertyPath: m_Size.y

@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     //Health Variables
-    static public float maxHealth = 10f;
+    static public float maxHealth = 15f;
     static public float health = maxHealth;
     
     //Shield and cooldown/"mana" variable
